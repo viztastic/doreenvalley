@@ -9,6 +9,7 @@ dependencies, nothing to install.
 | File | What it is |
 | --- | --- |
 | `index.html` | The whole site — all three pages, styles and scripts inline. |
+| `hero.jpg` | The valley photograph used behind the home page heading. Replace it with a better one any time — keep the same filename and nothing else needs changing. |
 | `_headers` | Security headers. Cloudflare Pages and Netlify both read this automatically. |
 | `README.md` | This file. Not published. |
 
