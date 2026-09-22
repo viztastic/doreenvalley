@@ -5,13 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Residents objecting to the proposed Middle Hut battery facility at 260 and 340 Middle Hut Road, Doreen. What is proposed, why it is opposed, and how to object.">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#FFFFFF">
+<meta name="theme-color" content="#0B1A11">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Save the Doreen Valley">
 <meta property="og:description" content="A 14-hectare battery plant is proposed for the valley at Middle Hut Road, Doreen. What is proposed, and how to object.">
 <meta property="og:image" content="hero.jpg">
 <meta property="og:locale" content="en_AU">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="preload" as="image" href="hero.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Cpath d='M17 31 C17 20 17 12 17 5' stroke='%23125430' stroke-width='2.6' fill='none'/%3E%3Cpath d='M17 17 C11 17 6 13 5 7 C12 7 16 11 17 17 Z' fill='%231B6E3F'/%3E%3Cpath d='M17 24 C23 24 28 20 29 14 C22 14 18 18 17 24 Z' fill='%231B6E3F' opacity='.72'/%3E%3C/svg%3E">
 <style>
 html{-webkit-text-size-adjust:100%}
@@ -23,7 +24,7 @@ img{max-width:100%}
 <title>Save the Doreen Valley</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
 
 <style>
 :root{
@@ -37,6 +38,7 @@ img{max-width:100%}
   --rule-2:#B9CDB2;
   --leaf:#1B6E3F;
   --leaf-deep:#125430;
+  --night:#0B1A11;
   --alarm:#A3301A;
   --alarm-tint:#FBEDE9;
   --sun:#8A6510;
@@ -45,7 +47,7 @@ img{max-width:100%}
   --hill:#CFE2C4;
   --hill-2:#B6D0AA;
   --steel:#6B7873;
-  --max:1120px;
+  --max:1140px;
   color-scheme:light;
 }
 
@@ -54,27 +56,27 @@ body{margin:0;background:var(--paper);color:var(--ink);
   font-family:'Source Serif 4',Georgia,'Times New Roman',serif;
   font-size:1.15rem;line-height:1.62;-webkit-font-smoothing:antialiased}
 h1,h2,h3,h4,.d{font-family:Archivo,'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:800;
-  letter-spacing:-.03em;line-height:1.04;text-wrap:balance;margin:0;color:var(--ink)}
+  letter-spacing:-.03em;line-height:1.05;text-wrap:balance;margin:0;color:var(--ink)}
 a{color:var(--leaf-deep);text-underline-offset:.18em;text-decoration-thickness:1.5px}
 a:hover{color:var(--leaf)}
-:focus-visible{outline:3px solid var(--leaf);outline-offset:2px;border-radius:3px}
+:focus-visible{outline:3px solid var(--leaf);outline-offset:3px;border-radius:3px}
 img,svg{max-width:100%}
 p{margin:0 0 .9em}
 strong{font-weight:600}
 
 .wrap{max-width:var(--max);margin:0 auto;padding-inline:22px}
-.label{font-family:Archivo,sans-serif;font-size:.85rem;font-weight:700;letter-spacing:.1em;
-  text-transform:uppercase;color:var(--leaf-deep);display:block;margin:0 0 .85rem}
+.label{font-family:Archivo,sans-serif;font-size:.85rem;font-weight:700;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--leaf);display:block;margin:0 0 .9rem}
 .fine{font-size:1rem;line-height:1.55;color:var(--ink-2)}
 .read{max-width:36rem}
 
-/* ---------- notice bar ---------- */
+/* ---------- notice ---------- */
 .notice{background:var(--alarm);color:#FFFFFF}
 .notice .wrap{padding-block:.7rem;font-family:Archivo,sans-serif;font-weight:600;font-size:1rem;line-height:1.4}
 
 /* ---------- masthead ---------- */
 header.mast{background:var(--paper);border-bottom:1px solid var(--rule);
-  position:sticky;top:env(safe-area-inset-top,0px);z-index:20}
+  position:sticky;top:env(safe-area-inset-top,0px);z-index:30}
 header.mast .wrap{display:flex;flex-wrap:wrap;gap:.6rem 1rem;align-items:center;
   justify-content:space-between;padding-block:.8rem}
 .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--ink)}
@@ -94,76 +96,149 @@ nav.top a.cta:hover{background:var(--leaf-deep);border-color:var(--leaf-deep);co
 .btn:hover{background:var(--leaf-deep);border-color:var(--leaf-deep);color:#FFFFFF}
 .btn.ghost{background:var(--paper);color:var(--ink);border-color:var(--rule-2)}
 .btn.ghost:hover{background:var(--tint);color:var(--ink);border-color:var(--leaf)}
+.btn.onphoto{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.85);color:#FFFFFF;
+  backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+.btn.onphoto:hover{background:#FFFFFF;border-color:#FFFFFF;color:var(--leaf-deep)}
+.btn.white{background:#FFFFFF;border-color:#FFFFFF;color:var(--leaf-deep)}
+.btn.white:hover{background:var(--tint);border-color:var(--tint);color:var(--leaf-deep)}
 
-/* ---------- hero with photograph ---------- */
-.hero{position:relative;background:var(--paper);overflow:hidden}
-.hero .photo{
-  position:absolute;inset:0;
-  background-image:url("hero.jpg");
-  background-size:cover;background-position:center 62%;
-}
-.hero .scrim{
-  position:absolute;inset:0;
-  background:linear-gradient(176deg,
-    rgba(255,255,255,.97) 0%,
-    rgba(255,255,255,.95) 34%,
-    rgba(255,255,255,.80) 56%,
-    rgba(255,255,255,.42) 76%,
-    rgba(255,255,255,.18) 100%);
-}
-.hero .inner{position:relative;padding-block:clamp(2.5rem,6vw,4rem) clamp(9rem,26vw,16rem)}
-.hero h1{font-size:clamp(2.1rem,6.4vw,4rem);letter-spacing:-.04em;max-width:22ch}
-.hero .sub{font-size:clamp(1.2rem,2.4vw,1.5rem);line-height:1.42;color:var(--ink-2);
-  max-width:34ch;margin-top:1.1rem}
-.hero-actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.75rem}
-.hero .credit{position:relative;font-family:Archivo,sans-serif;font-size:.85rem;font-weight:600;
-  color:var(--ink);background:rgba(255,255,255,.88);display:inline-block;
-  padding:.4rem .7rem;border-radius:3px;margin-top:0}
-.hero .creditwrap{position:absolute;left:0;right:0;bottom:0;padding:0 22px 1rem;
+/* ---------- HERO: full-colour photograph ---------- */
+.hero{position:relative;isolation:isolate;background:var(--night)}
+.hero .photo{position:absolute;inset:0;z-index:0;
+  background-image:url("hero.jpg");background-size:cover;background-position:center 58%}
+.hero .veil{position:absolute;inset:0;z-index:1;
+  background:
+    linear-gradient(to top, rgba(8,20,13,.92) 0%, rgba(8,20,13,.74) 26%, rgba(8,20,13,.40) 55%, rgba(8,20,13,.10) 80%, rgba(8,20,13,0) 100%),
+    linear-gradient(to right, rgba(8,20,13,.55) 0%, rgba(8,20,13,.12) 55%, rgba(8,20,13,0) 100%)}
+.hero .inner{position:relative;z-index:2;padding-block:clamp(6rem,20vw,11rem) clamp(1.75rem,4vw,2.5rem)}
+.hero h1{font-size:clamp(2.3rem,7vw,4.6rem);letter-spacing:-.042em;color:#FFFFFF;max-width:19ch;
+  text-shadow:0 2px 24px rgba(0,0,0,.45)}
+.hero h1 em{font-family:'Source Serif 4',Georgia,serif;font-style:italic;font-weight:400;
+  letter-spacing:-.015em;color:#FFFFFF}
+.hero .sub{font-size:clamp(1.15rem,2.4vw,1.5rem);line-height:1.45;color:rgba(255,255,255,.94);
+  max-width:36ch;margin-top:1.15rem;text-shadow:0 1px 14px rgba(0,0,0,.5)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.9rem}
+.hero .credit{position:relative;z-index:2;font-family:Archivo,sans-serif;font-size:.82rem;
+  font-weight:600;color:rgba(255,255,255,.82);padding:0 22px clamp(.9rem,2vw,1.2rem);
   max-width:var(--max);margin:0 auto}
+.animate .hero h1,.animate .hero .sub,.animate .hero-actions{animation:rise .8s cubic-bezier(.2,.7,.3,1) both}
+.animate .hero .sub{animation-delay:.1s}
+.animate .hero-actions{animation-delay:.2s}
+@keyframes rise{from{opacity:.001;transform:translateY(14px)}to{opacity:1;transform:none}}
 
-/* ---------- numbers ---------- */
-.nums{background:var(--tint);border-block:1px solid var(--rule)}
-.nums .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem 1.25rem;
-  padding-block:clamp(1.75rem,4vw,2.5rem)}
-@media(min-width:800px){.nums .grid{grid-template-columns:repeat(4,1fr)}}
-.num b{font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(2rem,5.5vw,3rem);
-  letter-spacing:-.04em;display:block;line-height:1}
-.num span{font-family:Archivo,sans-serif;font-weight:600;font-size:.95rem;
-  color:var(--ink-2);display:block;margin-top:.5rem;line-height:1.35}
-.num.hot b{color:var(--alarm)}
+/* numbers sitting on the foot of the photograph */
+.hero .figures{position:relative;z-index:2;border-top:1px solid rgba(255,255,255,.28);
+  background:rgba(8,20,13,.42);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.hero .figures .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.1rem 1.25rem;padding-block:1.35rem}
+@media(min-width:820px){.hero .figures .grid{grid-template-columns:repeat(4,1fr)}}
+.hero .figures b{font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(1.6rem,4vw,2.3rem);
+  letter-spacing:-.04em;display:block;line-height:1;color:#FFFFFF}
+.hero .figures span{font-family:Archivo,sans-serif;font-weight:600;font-size:.9rem;
+  color:rgba(255,255,255,.88);display:block;margin-top:.4rem;line-height:1.3}
 
-/* ---------- statements ---------- */
-.say{border-bottom:1px solid var(--rule);background:var(--paper)}
-.say:nth-of-type(even){background:var(--tint)}
-.say .wrap{padding-block:clamp(2rem,4.5vw,3rem);display:grid;gap:1rem;grid-template-columns:1fr}
-@media(min-width:900px){.say .wrap{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:2.5rem;align-items:start}}
-.say h2{font-size:clamp(1.55rem,4.2vw,2.6rem);letter-spacing:-.035em}
-.say p{margin:0;font-size:1.1rem;line-height:1.55;color:var(--ink-2);max-width:38ch}
+/* ---------- standfirst: prose + rule ---------- */
+.stand{padding-block:clamp(2.5rem,5.5vw,4rem)}
+.stand .grid{display:grid;gap:2rem;grid-template-columns:1fr}
+@media(min-width:900px){.stand .grid{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:3.5rem}}
+.stand p{font-size:clamp(1.2rem,2.3vw,1.42rem);line-height:1.52;margin:0 0 .75em}
+.stand p:first-of-type::first-letter{font-family:Archivo,sans-serif;font-weight:800;
+  font-size:3.4em;line-height:.82;float:left;margin:.06em .12em 0 0;color:var(--leaf)}
+.stand p:last-of-type{margin-bottom:0}
+.stand aside{border-top:3px solid var(--leaf);padding-top:1.1rem}
+.stand aside h3{font-size:1.1rem;margin-bottom:.6rem}
+.stand aside p{font-size:1.02rem;line-height:1.5;color:var(--ink-2);margin:0}
 
-/* ---------- generic ---------- */
+/* ---------- reasons: three cards ---------- */
+.reasons{background:var(--tint);border-block:1px solid var(--rule);padding-block:clamp(2.5rem,5.5vw,4rem)}
+.reasons .cards{display:grid;gap:1.25rem;grid-template-columns:1fr;margin-top:1.75rem}
+@media(min-width:760px){.reasons .cards{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--paper);border:1px solid var(--rule-2);border-radius:6px;
+  padding:1.5rem 1.4rem;display:flex;flex-direction:column;gap:.85rem}
+.card .n{font-family:Archivo,sans-serif;font-weight:800;font-size:.85rem;letter-spacing:.1em;
+  color:var(--leaf);display:block}
+.card svg{display:block}
+.card h3{font-size:1.3rem;letter-spacing:-.025em}
+.card p{font-size:1.04rem;line-height:1.5;color:var(--ink-2);margin:0}
+.card a.more{font-family:Archivo,sans-serif;font-weight:700;font-size:.98rem;
+  text-decoration:none;margin-top:auto;padding-top:.3rem}
+.card a.more:hover{text-decoration:underline}
+
+/* ---------- pull quote ---------- */
+.pull{padding-block:clamp(2.75rem,6vw,4.5rem)}
+.pull blockquote{margin:0;max-width:44rem}
+.pull q{quotes:none;font-family:'Source Serif 4',Georgia,serif;font-style:italic;font-weight:400;
+  font-size:clamp(1.5rem,4vw,2.5rem);line-height:1.26;letter-spacing:-.015em;display:block;color:var(--ink)}
+.pull .mark{font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(3rem,7vw,4.5rem);
+  line-height:.6;color:var(--leaf);display:block;margin-bottom:.35rem}
+.pull cite{display:block;margin-top:1.1rem;font-style:normal;font-family:Archivo,sans-serif;
+  font-weight:700;font-size:1rem;color:var(--ink-2)}
+.pull .after{margin-top:1.4rem;font-size:1.1rem;line-height:1.55;max-width:38rem;color:var(--ink-2)}
+
+/* ---------- drawing ---------- */
+.draw{background:var(--tint);border-block:1px solid var(--rule);padding-block:clamp(2.5rem,5.5vw,4rem)}
+figure{margin:0}
+figcaption{font-size:.95rem;line-height:1.5;color:var(--ink-3);
+  border-top:1px solid var(--rule-2);padding-top:.6rem;margin-top:.7rem;max-width:52rem}
+
+/* ---------- missing evidence ---------- */
+.missing-sec{padding-block:clamp(2.5rem,5.5vw,4rem)}
+.missing{margin:1.5rem 0 0;padding:0;list-style:none;display:grid;gap:0;border-top:1px solid var(--rule)}
+@media(min-width:760px){.missing{grid-template-columns:1fr 1fr;column-gap:2.5rem}}
+.missing li{display:grid;grid-template-columns:1.5rem 1fr;gap:.7rem;font-size:1.06rem;
+  line-height:1.45;border-bottom:1px solid var(--rule);padding:.7rem 0;align-items:baseline}
+.missing .x{color:var(--alarm);font-family:Archivo,sans-serif;font-weight:800;font-size:1.05rem}
+
+/* ---------- timeline strip ---------- */
+.clock{background:var(--night);color:#FFFFFF;padding-block:clamp(2.5rem,5.5vw,3.75rem)}
+.clock h2{color:#FFFFFF;font-size:clamp(1.6rem,4vw,2.4rem)}
+.clock .lead{color:rgba(255,255,255,.82);font-size:1.08rem;max-width:40rem;margin-top:.7rem}
+.steps{display:grid;gap:0;margin-top:2.25rem;grid-template-columns:1fr}
+@media(min-width:900px){.steps{grid-template-columns:repeat(5,1fr)}}
+.step{position:relative;padding:1.6rem 1rem 0 0}
+@media(max-width:899px){
+  .step{padding:.9rem 0 .9rem 1.5rem;border-left:2px solid rgba(255,255,255,.22)}
+  .step .dot{position:absolute;left:-7px;top:1.25rem}
+}
+@media(min-width:900px){
+  .step::before{content:"";position:absolute;top:6px;left:0;right:0;height:2px;background:rgba(255,255,255,.22)}
+  .step:last-child::before{right:auto;width:12px}
+  .step .dot{position:absolute;top:0;left:0}
+}
+.step .dot{width:14px;height:14px;border-radius:50%;background:rgba(255,255,255,.4);
+  border:2px solid var(--night);box-sizing:content-box}
+.step.done .dot{background:#FFFFFF}
+.step.here .dot{background:#F2C14E;width:18px;height:18px;margin:-2px 0 0 -2px;
+  box-shadow:0 0 0 5px rgba(242,193,78,.25)}
+.step .when{font-family:Archivo,sans-serif;font-weight:700;font-size:.82rem;letter-spacing:.07em;
+  text-transform:uppercase;color:rgba(255,255,255,.62);display:block}
+.step .what{font-family:Archivo,sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:-.02em;
+  display:block;margin-top:.3rem;color:#FFFFFF}
+.step.here .what{color:#F2C14E}
+.step .flag{font-family:Archivo,sans-serif;font-weight:800;font-size:.76rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--night);background:#F2C14E;display:inline-block;
+  padding:.2rem .45rem;border-radius:3px;margin-top:.5rem}
+.step .note{font-size:.95rem;line-height:1.45;color:rgba(255,255,255,.78);display:block;margin-top:.4rem}
+
+/* ---------- closing photograph ---------- */
+.close{position:relative;isolation:isolate;background:var(--night)}
+.close .photo{position:absolute;inset:0;z-index:0;
+  background-image:url("hero.jpg");background-size:cover;background-position:center 32%}
+.close .veil{position:absolute;inset:0;z-index:1;
+  background:linear-gradient(to top, rgba(8,20,13,.90) 0%, rgba(8,20,13,.68) 45%, rgba(8,20,13,.42) 100%)}
+.close .inner{position:relative;z-index:2;padding-block:clamp(3rem,8vw,5.5rem);
+  display:grid;gap:1.75rem;grid-template-columns:1fr;align-items:end}
+@media(min-width:880px){.close .inner{grid-template-columns:minmax(0,1.5fr) auto;gap:2.5rem}}
+.close h2{color:#FFFFFF;font-size:clamp(1.8rem,5vw,3.1rem);letter-spacing:-.035em;max-width:24ch;
+  text-shadow:0 2px 20px rgba(0,0,0,.45)}
+.close p{color:rgba(255,255,255,.92);font-size:1.12rem;line-height:1.5;max-width:40ch;margin:1rem 0 0;
+  text-shadow:0 1px 12px rgba(0,0,0,.5)}
+
+/* ---------- inner pages ---------- */
 section.pad{padding-block:clamp(2.25rem,5vw,3.5rem)}
 .rule-top{border-top:1px solid var(--rule)}
 h2.big{font-size:clamp(1.7rem,4.5vw,2.6rem);letter-spacing:-.035em}
 h3{font-size:clamp(1.15rem,2.4vw,1.45rem);font-weight:800;letter-spacing:-.025em}
 
-figure{margin:0}
-figcaption{font-size:.95rem;line-height:1.5;color:var(--ink-3);
-  border-top:1px solid var(--rule);padding-top:.6rem;margin-top:.6rem}
-
-.missing{margin:1.25rem 0 0;padding:0;list-style:none;display:grid;gap:.6rem}
-@media(min-width:700px){.missing{grid-template-columns:1fr 1fr;gap:.6rem 1.75rem}}
-.missing li{display:grid;grid-template-columns:1.6rem 1fr;gap:.6rem;font-size:1.05rem;line-height:1.45}
-.missing .x{color:var(--alarm);font-family:Archivo,sans-serif;font-weight:800;font-size:1.15rem;line-height:1.35}
-
-.cta-band{background:var(--leaf)}
-.cta-band .wrap{padding-block:clamp(2rem,4.5vw,3rem);display:flex;flex-wrap:wrap;gap:1.25rem;
-  align-items:center;justify-content:space-between}
-.cta-band h2{font-size:clamp(1.5rem,4.2vw,2.4rem);letter-spacing:-.035em;color:#FFFFFF;max-width:24ch}
-.cta-band .btn{background:#FFFFFF;border-color:#FFFFFF;color:var(--leaf-deep)}
-.cta-band .btn:hover{background:var(--tint);border-color:var(--tint);color:var(--leaf-deep)}
-
-/* ---------- case page ---------- */
 .ledger{border-top:2px solid var(--ink);margin-top:1.25rem}
 .ledger dl{display:grid;grid-template-columns:1fr;margin:0}
 @media(min-width:700px){.ledger dl{grid-template-columns:1fr 1fr;column-gap:2.5rem}}
@@ -175,7 +250,7 @@ figcaption{font-size:.95rem;line-height:1.5;color:var(--ink-3);
 
 .arg{display:grid;gap:clamp(1.25rem,3.5vw,2.25rem);grid-template-columns:1fr}
 @media(min-width:920px){.arg{grid-template-columns:minmax(0,1fr) minmax(0,20rem)}}
-.aside{background:var(--tint);border:1px solid var(--rule-2);border-radius:4px;padding:1.3rem 1.4rem;align-self:start}
+.aside{background:var(--tint);border:1px solid var(--rule-2);border-radius:6px;padding:1.3rem 1.4rem;align-self:start}
 .aside h4{font-size:1.05rem;font-weight:800;letter-spacing:-.02em;margin-bottom:.7rem}
 .aside ul{margin:0;padding-left:1.15rem}
 .aside li{font-size:1.02rem;line-height:1.5;margin-bottom:.6rem}
@@ -186,7 +261,7 @@ figcaption{font-size:.95rem;line-height:1.5;color:var(--ink-3);
   font-size:.88rem;font-weight:600;color:var(--ink-3)}
 .duo{display:grid;gap:1.25rem;grid-template-columns:1fr}
 @media(min-width:880px){.duo{grid-template-columns:1fr 1fr}}
-.panel{background:var(--paper);border:1px solid var(--rule-2);border-radius:4px;padding:clamp(1.25rem,3vw,1.85rem)}
+.panel{background:var(--paper);border:1px solid var(--rule-2);border-radius:6px;padding:clamp(1.25rem,3vw,1.85rem)}
 
 details.src{border-top:1px solid var(--rule);padding:.85rem 0;margin-top:2rem}
 details.src summary{font-family:Archivo,sans-serif;font-weight:700;font-size:1.05rem;cursor:pointer;min-height:40px}
@@ -194,7 +269,6 @@ details.src ul{margin:1rem 0 0;padding:0;list-style:none}
 details.src li{border-top:1px solid var(--rule);padding:.7rem 0;font-size:1rem;line-height:1.5}
 details.src .who{font-family:Archivo,sans-serif;font-size:.85rem;font-weight:600;color:var(--ink-3);display:block}
 
-/* ---------- act page ---------- */
 ol.tl{list-style:none;margin:1.25rem 0 0;padding:0}
 ol.tl li{padding:.85rem 0;border-bottom:1px solid var(--rule)}
 ol.tl .when{font-family:Archivo,sans-serif;font-size:.9rem;font-weight:700;
@@ -236,15 +310,16 @@ footer.foot .grid{display:grid;gap:1.35rem;grid-template-columns:1fr}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 @media print{
-  header.mast,nav.top,.cta-band,.hero .photo,.hero .scrim{display:none!important}
+  header.mast,nav.top,.close,.hero .photo,.hero .veil{display:none!important}
   body{font-size:11pt} [data-page]{display:block!important}
+  .clock{background:#FFF;color:#000} .clock h2,.step .what{color:#000}
 }
 </style>
 
 </head>
 <body>
 <div class="notice">
-  <div class="wrap">When the submission period opens it will be the only chance to have a say. There is no appeal afterwards.</div>
+  <div class="wrap">When the objection period opens it will be the only chance to have a say. There is no appeal afterwards.</div>
 </div>
 
 <header class="mast">
@@ -273,74 +348,105 @@ footer.foot .grid{display:grid;gap:1.35rem;grid-template-columns:1fr}
 
   <section class="hero">
     <div class="photo" role="img" aria-label="Green grazing paddocks rolling down into the valley at Middle Hut Road, Doreen, with hills on the horizon"></div>
-    <div class="scrim"></div>
+    <div class="veil"></div>
     <div class="wrap inner">
-      <h1>A battery plant is proposed for the valley at Middle&nbsp;Hut&nbsp;Road.</h1>
-      <p class="sub">It would cover about 14 hectares of these paddocks. The homes above the valley look straight down onto the site.</p>
+      <h1>This valley is quiet. <em>They plan to change that.</em></h1>
+      <p class="sub">A 14-hectare battery plant is proposed for these paddocks at Middle Hut Road, Doreen. The objection period is the only say we get.</p>
       <div class="hero-actions">
-        <a class="btn" href="#/act">How to object</a>
-        <a class="btn ghost" href="#/case">What's proposed</a>
+        <a class="btn white" href="#/act">Object to it</a>
+        <a class="btn onphoto" href="#/case">See what's proposed</a>
       </div>
     </div>
-    <div class="creditwrap"><span class="credit">Looking across the valley at Middle Hut Road, Doreen</span></div>
+    <p class="credit">Looking across the valley at Middle Hut Road, Doreen</p>
+    <div class="figures">
+      <div class="wrap grid">
+        <div><b>14 ha</b><span>of batteries and electrical plant</span></div>
+        <div><b>290 MW</b><span>operating day and night</span></div>
+        <div><b>None</b><span>noise levels published</span></div>
+        <div><b>2 or 3</b><span>permanent local jobs</span></div>
+      </div>
+    </div>
   </section>
 
-  <div class="nums">
+  <section class="stand">
     <div class="wrap grid">
-      <div class="num"><b>14 ha</b><span>of batteries and electrical plant</span></div>
-      <div class="num"><b>290 MW</b><span>operating day and night</span></div>
-      <div class="num hot"><b>None</b><span>noise levels published</span></div>
-      <div class="num hot"><b>2 or 3</b><span>permanent local jobs</span></div>
+      <div>
+        <p>These paddocks have been grazed for generations. The plan is to fill fourteen hectares of them with batteries, transformers and a 220 kV terminal station, running around the clock until about 2050.</p>
+      </div>
+      <aside>
+        <h3>Why it matters now</h3>
+        <p>The Minister for Planning decides this, not the Council — and nobody can appeal the decision.</p>
+        <p style="margin-top:.8rem"><strong>The objection period is our whole say.</strong> It has not opened yet.</p>
+      </aside>
     </div>
-  </div>
+  </section>
 
-  <div class="say">
+  <section class="reasons">
     <div class="wrap">
-      <h2>It would operate 24 hours a day.</h2>
-      <p>The developers say the main noise comes from the inverters and the cooling fans that keep the batteries at temperature. Those fans do not stop at night.</p>
+      <span class="label">Three reasons residents are objecting</span>
+      <h2 class="big">What it would do to this valley</h2>
+      <div class="cards">
+
+        <div class="card">
+          <span class="n">ONE</span>
+          <svg width="56" height="40" viewBox="0 0 56 40" aria-hidden="true">
+            <rect x="4" y="15" width="14" height="11" rx="1.5" fill="none" stroke="#1B6E3F" stroke-width="2"></rect>
+            <path d="M24 12 C29 16 29 24 24 28" fill="none" stroke="#1B6E3F" stroke-width="2" stroke-linecap="round"></path>
+            <path d="M33 7 C41 13 41 27 33 33" fill="none" stroke="#1B6E3F" stroke-width="2" stroke-linecap="round" opacity=".7"></path>
+            <path d="M42 2 C53 10 53 30 42 38" fill="none" stroke="#1B6E3F" stroke-width="2" stroke-linecap="round" opacity=".42"></path>
+          </svg>
+          <h3>The noise never stops</h3>
+          <p>The developers name the source themselves: inverters and cooling fans. They run through the night, when there is nothing out here to cover them.</p>
+          <a class="more" href="#/case">Read about the noise →</a>
+        </div>
+
+        <div class="card">
+          <span class="n">TWO</span>
+          <svg width="56" height="40" viewBox="0 0 56 40" aria-hidden="true">
+            <path d="M2 10 L12 10 L18 30 L54 30" fill="none" stroke="#1B6E3F" stroke-width="2" stroke-linejoin="round"></path>
+            <path d="M6 10 L6 6 L9 4 L12 6 L12 10" fill="none" stroke="#1B6E3F" stroke-width="1.8"></path>
+            <path d="M8 12 L34 29" fill="none" stroke="#A3301A" stroke-width="1.8" stroke-dasharray="4 3"></path>
+            <rect x="30" y="24" width="8" height="6" fill="#1B6E3F" opacity=".5"></rect>
+            <rect x="40" y="24" width="8" height="6" fill="#1B6E3F" opacity=".5"></rect>
+          </svg>
+          <h3>We look down onto it</h3>
+          <p>The only screening proposed is planting along the fence line. That does nothing for a house on higher ground looking down.</p>
+          <a class="more" href="#/case">Read about the view →</a>
+        </div>
+
+        <div class="card">
+          <span class="n">THREE</span>
+          <svg width="56" height="40" viewBox="0 0 56 40" aria-hidden="true">
+            <circle cx="20" cy="20" r="14" fill="none" stroke="#A3301A" stroke-width="2"></circle>
+            <path d="M10 30 L30 10" stroke="#A3301A" stroke-width="2" stroke-linecap="round"></path>
+            <path d="M40 12 L52 12 M40 20 L52 20 M40 28 L48 28" stroke="#1B6E3F" stroke-width="2" stroke-linecap="round" opacity=".55"></path>
+          </svg>
+          <h3>Nobody can appeal it</h3>
+          <p>The Minister decides and the Council can only comment. Once it is decided there is no appeal, for anyone.</p>
+          <a class="more" href="#/act">Object while you can →</a>
+        </div>
+
+      </div>
     </div>
-  </div>
+  </section>
 
-  <div class="say">
+  <section class="pull">
     <div class="wrap">
-      <h2>No noise levels have been published.</h2>
-      <p>Not the expected noise at the nearest house, not the distance to the nearest house, and not the acoustic report. Residents are being asked to accept it without those figures.</p>
+      <blockquote>
+        <span class="mark" aria-hidden="true">&ldquo;</span>
+        <q>There are no third-party appeal rights for either Council or the community in relation to the Minister's decision under this process.</q>
+        <cite>Nillumbik Shire Council, 20 August 2026</cite>
+      </blockquote>
+      <p class="after">No second hearing, no tribunal, no review. What residents put in writing is the entire record of what this community said.</p>
     </div>
-  </div>
+  </section>
 
-  <div class="say">
+  <section class="draw">
     <div class="wrap">
-      <h2>The only screening proposed is planting along the fence line.</h2>
-      <p>That may hide the site from someone standing at the boundary. It does nothing for a house on higher ground looking down into the valley.</p>
-    </div>
-  </div>
-
-  <div class="say">
-    <div class="wrap">
-      <h2>The land is Green Wedge.</h2>
-      <p>Green Wedge zoning exists to keep industrial development out of Melbourne's rural landscapes. The proposal includes a 220 kV terminal station, transformers and security fencing.</p>
-    </div>
-  </div>
-
-  <div class="say">
-    <div class="wrap">
-      <h2>There is no right of appeal.</h2>
-      <p>The Minister for Planning will decide, not the Council. Nillumbik Shire Council has confirmed that neither residents nor the Council can appeal that decision. There is no VCAT hearing afterwards.</p>
-    </div>
-  </div>
-
-  <div class="say">
-    <div class="wrap">
-      <h2>We are not against batteries. We are against this location.</h2>
-      <p>Victoria needs battery storage as its coal power stations close. It does not need to be built on the floor of a residential valley, in a bushfire-prone area, with the noise and visual impacts still unmeasured.</p>
-    </div>
-  </div>
-
-  <section class="pad">
-    <div class="wrap">
-      <h2 class="big">What we would be looking at</h2>
+      <span class="label">The shape of it</span>
+      <h2 class="big">Fourteen hectares, on the floor of the valley</h2>
       <figure style="margin-top:1.5rem">
-        <svg viewBox="0 0 1200 400" role="img" aria-labelledby="secT secD" style="width:100%;height:auto;display:block;border:1px solid var(--rule);border-radius:4px">
+        <svg viewBox="0 0 1200 400" role="img" aria-labelledby="secT secD" style="width:100%;height:auto;display:block;border:1px solid var(--rule-2);border-radius:6px;background:var(--sky)">
           <title id="secT">Cross-section of the valley showing homes above the proposed battery site</title>
           <desc id="secD">Houses sit on high ground at the left. Lines of sight run down to a block of battery containers and a terminal station on the valley floor, about 14 hectares wide, with a transmission tower on the far rise.</desc>
           <rect x="0" y="0" width="1200" height="400" fill="var(--sky)"></rect>
@@ -394,17 +500,22 @@ footer.foot .grid{display:grid;gap:1.35rem;grid-template-columns:1fr}
             <text x="248" y="250" fill="var(--alarm)" font-weight="700">line of sight</text>
           </g>
         </svg>
-        <figcaption>A schematic drawing, not a survey. No structure heights or photographs of the finished facility have been released by the developers, so its true size cannot yet be drawn. Site figures from Nillumbik Shire Council, 20 August 2026.</figcaption>
+        <figcaption>A schematic drawing, not a survey — no structure heights have been released, so the true size cannot yet be drawn. Figures from Nillumbik Shire Council, 20 August 2026.</figcaption>
       </figure>
+    </div>
+  </section>
 
-      <h2 class="big" style="margin-top:clamp(2.5rem,5vw,3.5rem)">What has not been published</h2>
-      <p class="fine read" style="margin-top:.7rem">The developers say these studies exist and will be released when the application goes on public exhibition — the same short period in which residents must respond to them.</p>
+  <section class="missing-sec">
+    <div class="wrap">
+      <span class="label">The part that should worry everyone</span>
+      <h2 class="big">Eight things the developers have not published</h2>
+      <p class="fine read" style="margin-top:.8rem">All of it is due to appear during the objection period — the same short window in which we have to answer it.</p>
       <ul class="missing">
         <li><span class="x">✕</span><span>Expected noise level at the nearest house</span></li>
         <li><span class="x">✕</span><span>Distance from the plant to the nearest house</span></li>
         <li><span class="x">✕</span><span>The acoustic report</span></li>
         <li><span class="x">✕</span><span>Heights of the buildings and equipment</span></li>
-        <li><span class="x">✕</span><span>Photographs showing how it would look</span></li>
+        <li><span class="x">✕</span><span>Any image of how it would look</span></li>
         <li><span class="x">✕</span><span>The bushfire and fire safety assessment</span></li>
         <li><span class="x">✕</span><span>Existing night-time noise levels in this valley</span></li>
         <li><span class="x">✕</span><span>How many battery units, inverters and transformers</span></li>
@@ -412,12 +523,31 @@ footer.foot .grid{display:grid;gap:1.35rem;grid-template-columns:1fr}
     </div>
   </section>
 
-  <div class="cta-band">
+  <section class="clock">
     <div class="wrap">
-      <h2>One written objection counts for more than a hundred conversations.</h2>
-      <a class="btn" href="#/act">How to object</a>
+      <h2>Where this is up to</h2>
+      <p class="lead">Three steps are already done, and residents were not part of any of them.</p>
+      <div class="steps">
+        <div class="step done"><span class="dot"></span><span class="when">Early 2026</span><span class="what">Site chosen</span><span class="note">Beside the existing power lines.</span></div>
+        <div class="step done"><span class="dot"></span><span class="when">Aug – Sep 2026</span><span class="what">Developers consulted</span><span class="note">Letters and one drop-in session.</span></div>
+        <div class="step done"><span class="dot"></span><span class="when">September 2026</span><span class="what">Application lodged</span><span class="note">With the Minister, not the Council.</span></div>
+        <div class="step here"><span class="dot"></span><span class="when">Date not yet announced</span><span class="what">The objection period</span><span class="flag">We are here</span><span class="note">Short, and opens with little warning.</span></div>
+        <div class="step"><span class="dot"></span><span class="when">End of 2026</span><span class="what">The Minister decides</span><span class="note">No appeal, by anyone.</span></div>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <section class="close">
+    <div class="photo" role="img" aria-label="The valley at Middle Hut Road, Doreen"></div>
+    <div class="veil"></div>
+    <div class="wrap inner">
+      <div>
+        <h2>It takes a few minutes, and it is the only thing that counts.</h2>
+        <p>Leave your details and we will email you the moment the objection period opens.</p>
+      </div>
+      <div><a class="btn white" href="#/act">How to object</a></div>
+    </div>
+  </section>
 </div>
 
 <!-- ============ CASE ============ -->
@@ -427,7 +557,7 @@ footer.foot .grid{display:grid;gap:1.35rem;grid-template-columns:1fr}
     <div class="wrap">
       <span class="label">What's proposed</span>
       <h1 style="font-size:clamp(1.9rem,5.5vw,3.2rem);max-width:24ch">The proposal, and why residents are objecting</h1>
-      <p class="fine read" style="margin-top:1rem">Every figure and quotation on this page comes from the developers' own website, from Nillumbik Shire Council, or from EPA Victoria. The sources are listed at the bottom.</p>
+      <p class="fine read" style="margin-top:1rem">Every figure here comes from the developers, the Council or EPA Victoria. Sources are at the bottom.</p>
 
       <div class="ledger">
         <dl>
@@ -457,13 +587,16 @@ footer.foot .grid{display:grid;gap:1.35rem;grid-template-columns:1fr}
       <h2 class="big">Noise</h2>
       <div class="arg" style="margin-top:1.5rem">
         <div>
-          <p>The developers name the source themselves. The main operational noise comes from <strong>“the inverters and cooling fans required to regulate battery cell temperature.”</strong> Those run whenever the batteries are charging or discharging, which for a plant of this kind is most of the time, including overnight.</p>
-          <p>Two things make that worse at this particular site.</p>
-          <p>First, the houses are above the plant and facing it, across open paddocks with nothing in between. Second, there is very little background noise here after dark. A hum that would be lost in a suburb is clearly audible on a quiet ridge at two in the morning.</p>
-          <p>The character of the noise matters as well as the loudness. Fans and inverters produce a steady, low, droning sound. EPA Victoria's own guidance says that noise “with an unpleasant character is likely to be more disturbing than noise of the same intensity without that character.”</p>
-          <p>The developers say their acoustic assessment will meet EPA guidelines and stay “within applicable limits.” That is necessary, but it is not enough. EPA Victoria says so itself:</p>
+          <h3>What makes the noise</h3>
+          <p style="margin-top:.5rem">The developers' own words: the main noise is <strong>“the inverters and cooling fans required to regulate battery cell temperature.”</strong> They run whenever the batteries work, which is most of the time.</p>
+
+          <h3 style="margin-top:1.75rem">Why it is worse here</h3>
+          <p style="margin-top:.5rem">The houses are above the site and facing it, across open paddocks. There is almost no background noise after dark to cover a steady hum.</p>
+
+          <h3 style="margin-top:1.75rem">Why “within limits” is not enough</h3>
+          <p style="margin-top:.5rem">Fans and inverters make a low, droning sound, and EPA Victoria treats that character as more disturbing than the same loudness without it. EPA also says compliance with the limits does not settle the question:</p>
           <p class="quote">Even where a person complies with the prescribed noise limits, that noise could still be found to be unreasonable — relevant where the impact “is not well represented by the assessment method in EPA publication 1826”, expressly naming low frequency noise.<cite>EPA Victoria, Legislative noise framework</cite></p>
-          <p>There is more that a written objection can rely on. Section 166 of the <em>Environment Protection Act 2017</em> prohibits unreasonable noise from commercial premises. Section 25 imposes a general duty to minimise harm that applies regardless of whether the limits are met. Regulation 120 makes the frequency of the noise a matter that must be considered, and EPA publication 1996 sets out a method for assessing low-frequency noise in particular.</p>
+          <p>An objection can also rely on section 166 of the <em>Environment Protection Act 2017</em>, the general duty in section 25, regulation 120 on noise frequency, and EPA publication 1996 on low-frequency noise.</p>
         </div>
         <aside class="aside">
           <h4>What to ask for</h4>
@@ -485,13 +618,21 @@ footer.foot .grid{display:grid;gap:1.35rem;grid-template-columns:1fr}
       <h2 class="big">The view</h2>
       <div class="arg" style="margin-top:1.5rem">
         <div>
-          <p>The whole site is in the <strong>Green Wedge Zone</strong>. That zoning exists to keep this kind of development out of the rural landscape around Melbourne.</p>
-          <p>What would be built is not simply a paddock with some boxes in it. Council's description lists a utility-scale battery, <strong>a 220 kV terminal station</strong>, underground electrical infrastructure, water storage and firefighting infrastructure, access tracks and operational buildings. A terminal station is a substation: steel structures, gantries and transformers. Add security fencing around the perimeter and it looks industrial from every high point nearby.</p>
-          <p>Against all that, the published mitigation is a single sentence. The project “will include landscaping on site boundaries to help screen the BESS from view.” Planting along a boundary screens a person standing at the fence. It does very little for a house on the ridge looking down, which is the situation most affected residents are in. Nothing published addresses that: no heights, no setbacks, no photographs taken from above.</p>
-          <p>Part of the site also carries an Environmental Significance Overlay protecting habitat and biodiversity. And the facility is close to permanent. Its expected life runs to about 2050, with removal left to a permit condition to be written later, while the developers acknowledge there is no commercial-scale recycling for these units yet.</p>
+          <h3>What would actually be built</h3>
+          <p style="margin-top:.5rem">Council's own description: a utility-scale battery, <strong>a 220 kV terminal station</strong>, underground electrical infrastructure, water storage and firefighting infrastructure, access tracks, buildings and security fencing. A terminal station is a substation — steel structures, gantries and transformers.</p>
+
+          <h3 style="margin-top:1.75rem">Zoned to prevent exactly this</h3>
+          <p style="margin-top:.5rem">The whole site is Green Wedge, the zoning that keeps industrial development out of Melbourne's rural landscapes. Part of it also carries an Environmental Significance Overlay.</p>
+
+          <h3 style="margin-top:1.75rem">The screening does not work from above</h3>
+          <p style="margin-top:.5rem">The only mitigation published is landscaping “on site boundaries to help screen the BESS from view.” No heights, no setbacks and no images from elevated homes have been released, so nobody can test it.</p>
+
+          <h3 style="margin-top:1.75rem">And it is close to permanent</h3>
+          <p style="margin-top:.5rem">Expected to run until about 2050, with removal left to a permit condition written later — while the developers acknowledge there is no commercial-scale recycling for these units yet.</p>
+
           <div class="note-box">
             <b>Photographs would help a great deal</b>
-            A photograph taken from a real window or deck carries more weight with a planning panel than any drawing. If you can take one looking towards the site, <a href="#/act">leave your details</a> and we will be in touch about sending it in.
+            A photo from a real window carries more weight with a planning panel than any drawing. <a href="#/act">Leave your details</a> and we will be in touch about sending one in.
           </div>
         </div>
         <aside class="aside">
@@ -513,14 +654,19 @@ footer.foot .grid{display:grid;gap:1.35rem;grid-template-columns:1fr}
       <div class="duo" style="margin-top:1.5rem">
         <div class="panel">
           <h3>Nobody can appeal the decision</h3>
-          <p style="margin-top:.8rem">The application is expected to be decided by the Minister for Planning under a provision called Clause 53.22, which leaves the Council able only to comment. Council puts it plainly: <strong>“There are no third-party appeal rights for either Council or the community in relation to the Minister's decision under this process.”</strong></p>
-          <p style="margin:0">There is no VCAT hearing afterwards. The public exhibition period is not one step among several. It is the only one.</p>
+          <p style="margin-top:.8rem">The Minister decides under a provision called Clause 53.22, leaving the Council able only to comment. Council puts it plainly: <strong>“There are no third-party appeal rights for either Council or the community in relation to the Minister's decision under this process.”</strong></p>
+          <p style="margin:0">No VCAT hearing afterwards. The objection period is the only step.</p>
         </div>
         <div class="panel">
           <h3>Fire risk</h3>
-          <p style="margin-top:.8rem">To be accurate about this: the site is in a designated Bushfire Prone Area, and according to Council it is <em>not</em> subject to a Bushfire Management Overlay. The developers acknowledge the risk anyway, writing that “while fires associated with BESS technology are rare, there are risks and hazards that need to be managed.”</p>
-          <p style="margin:0">Their fire assessment is to follow the CFA's guidelines for renewable energy facilities, which is the right document to use. It has not been published, and no figures for firefighting water supply or separation distances are on the public record.</p>
+          <p style="margin-top:.8rem">The site is in a designated Bushfire Prone Area, though per Council it is <em>not</em> under a Bushfire Management Overlay. The developers concede that “while fires associated with BESS technology are rare, there are risks and hazards that need to be managed.”</p>
+          <p style="margin:0">Their fire assessment follows the right CFA guidelines — but it has not been published, and no water supply or separation figures are on the record.</p>
         </div>
+      </div>
+
+      <div class="panel" style="margin-top:1.25rem;background:var(--tint)">
+        <h3>What we are not saying</h3>
+        <p style="margin-top:.8rem">Victoria needs battery storage as its coal stations close, and we do not dispute that. Our objection is to this location, this design, and the missing figures.</p>
       </div>
 
       <details class="src">
@@ -538,12 +684,14 @@ footer.foot .grid{display:grid;gap:1.35rem;grid-template-columns:1fr}
     </div>
   </section>
 
-  <div class="cta-band">
-    <div class="wrap">
-      <h2>The written objection is what counts.</h2>
-      <a class="btn" href="#/act">How to object</a>
+  <section class="close">
+    <div class="photo" role="img" aria-label="The valley at Middle Hut Road, Doreen"></div>
+    <div class="veil"></div>
+    <div class="wrap inner">
+      <div><h2>The written objection is what counts.</h2></div>
+      <div><a class="btn white" href="#/act">How to object</a></div>
     </div>
-  </div>
+  </section>
 </div>
 
 <!-- ============ ACT ============ -->
@@ -553,8 +701,8 @@ footer.foot .grid{display:grid;gap:1.35rem;grid-template-columns:1fr}
     <div class="wrap">
       <span class="label">How to object</span>
       <h1 style="font-size:clamp(1.9rem,5.5vw,3.2rem);max-width:22ch">Writing an objection takes a few minutes</h1>
-      <p class="fine read" style="margin-top:1rem">Tick the points that are true for you, fill in your details, and the wording will be written for you below. You can change any of it before you send it.</p>
-      <p class="fine read">Two things to know first. Objections are <strong>public documents</strong>, so the developers will be able to read yours, including your name. And an objection carries more weight when it says how <em>you personally</em> would be affected — one paragraph about your own bedroom window at night is worth more than a page of general complaint.</p>
+      <p class="fine read" style="margin-top:1rem">Tick what is true for you and the wording is written below. Change any of it before you send it.</p>
+      <p class="fine read">Objections are <strong>public documents</strong>, so the developers can read yours, name included. Say how it affects <em>you</em> — one paragraph about your own window at night beats a page of general complaint.</p>
 
       <div class="panel" style="margin-top:1.75rem">
         <form id="subForm" novalidate>
@@ -602,13 +750,13 @@ footer.foot .grid{display:grid;gap:1.35rem;grid-template-columns:1fr}
               <button type="button" class="btn ghost" id="resetBtn">Start again</button>
               <span class="status" id="copyStatus" role="status"></span>
             </div>
-            <p class="fine" style="margin-top:.85rem">Press <strong>Copy this objection</strong>, then paste it into an email to the address shown on the public notice. That is the objection that counts. Sending us a copy as well is optional, but it lets us tell the Council and the newspapers how many objections were lodged.</p>
+            <p class="fine" style="margin-top:.85rem">Press <strong>Copy this objection</strong>, then paste it into an email to the address on the public notice. Sending us a copy is optional, but it lets us count how many went in.</p>
           </fieldset>
         </form>
 
         <div class="note-box">
           <b>Not yet — we are waiting on the public notice</b>
-          An objection needs the <strong>application number</strong> and must be sent to the <strong>address given on the public notice</strong>, before the closing date. None of that has been published yet. As soon as it is, it will appear here. Leave your details below and we will email you when it does.
+          An objection needs the <strong>application number</strong> and the <strong>address on the notice</strong>. Neither exists yet. Leave your details below and we will email you the moment they do.
         </div>
       </div>
     </div>
@@ -620,7 +768,7 @@ footer.foot .grid{display:grid;gap:1.35rem;grid-template-columns:1fr}
       <div class="duo" style="margin-top:1.5rem">
         <div class="panel">
           <h3>Sign the petition</h3>
-          <p class="fine" style="margin-top:.7rem">An objection is evidence. A petition is numbers — it shows the Council, the Minister's office and the local papers how much of Doreen is opposed.</p>
+          <p class="fine" style="margin-top:.7rem">An objection is evidence. A petition is numbers — it shows how much of Doreen is opposed.</p>
           <form id="petForm" novalidate style="margin-top:1.1rem">
             <div class="fields">
               <div class="field wide"><label class="fl" for="p-name">Your full name</label><input type="text" id="p-name" autocomplete="name" placeholder="Your name"></div>
@@ -632,7 +780,7 @@ footer.foot .grid{display:grid;gap:1.35rem;grid-template-columns:1fr}
         </div>
         <div class="panel">
           <h3>Ask us to let you know</h3>
-          <p class="fine" style="margin-top:.7rem">The period for objecting will be short and will open with little warning. Leave your details and we will send you one email when it opens, with the application number and the closing date.</p>
+          <p class="fine" style="margin-top:.7rem">The objection period will be short and opens with little warning. One email when it does, with the application number and closing date.</p>
           <form id="listForm" novalidate style="margin-top:1.1rem">
             <div class="fields">
               <div class="field wide"><label class="fl" for="l-name">Your full name</label><input type="text" id="l-name" autocomplete="name" placeholder="Your name"></div>
@@ -643,7 +791,7 @@ footer.foot .grid{display:grid;gap:1.35rem;grid-template-columns:1fr}
           </form>
         </div>
       </div>
-      <p class="fine" style="margin-top:1.35rem">Your details are used only for this campaign: to count you, and to tell you when the objection period opens. They are not passed to anyone else.</p>
+      <p class="fine" style="margin-top:1.35rem">Your details are used only for this campaign and passed to nobody else.</p>
     </div>
   </section>
 
@@ -651,13 +799,13 @@ footer.foot .grid{display:grid;gap:1.35rem;grid-template-columns:1fr}
     <div class="wrap">
       <h2 class="big">What happens next</h2>
       <ol class="tl">
-        <li><span class="when">August and September 2026</span><span class="what">The developers consulted the community</span><span class="note">Letters to neighbours and one drop-in session at Arthurs Creek on 29 August.</span></li>
-        <li><span class="when">September 2026</span><span class="what">Application lodged with the Minister for Planning</span><span class="note">On 20 August the Council said it expected the application to be lodged the following month.</span></li>
-        <li class="now"><span class="when">Next — date not yet announced</span><span class="what">The objection period opens. This is our only chance.</span><span class="note">The developers' studies become public at this point, and the closing date starts running at the same time.</span></li>
+        <li><span class="when">August and September 2026</span><span class="what">The developers consulted the community</span><span class="note">Letters and one drop-in session at Arthurs Creek on 29 August.</span></li>
+        <li><span class="when">September 2026</span><span class="what">Application lodged with the Minister for Planning</span><span class="note">Council said on 20 August that it expected lodgement the following month.</span></li>
+        <li class="now"><span class="when">Next — date not yet announced</span><span class="what">The objection period opens. This is our only chance.</span><span class="note">The studies become public and the closing date starts running at the same moment.</span></li>
         <li><span class="when">End of 2026</span><span class="what">The Minister decides</span><span class="note">Nobody can appeal the decision.</span></li>
-        <li><span class="when">2028 to 2029</span><span class="what">Construction, then operation</span><span class="note">Eighteen months to two years of works, with the plant running from late 2029.</span></li>
+        <li><span class="when">2028 to 2029</span><span class="what">Construction, then operation</span><span class="note">Up to two years of works, running from late 2029.</span></li>
       </ol>
-      <p class="fine" style="margin-top:1.1rem">If you receive the public notice in the post before it appears here, please let us know — mailed notices often reach neighbours first.</p>
+      <p class="fine" style="margin-top:1.1rem">If the notice reaches you in the post first, please let us know.</p>
     </div>
   </section>
 </div>
@@ -668,7 +816,7 @@ footer.foot .grid{display:grid;gap:1.35rem;grid-template-columns:1fr}
   <div class="wrap grid">
     <div>
       <p class="d" style="font-size:1.1rem;margin-bottom:.5rem">Save the Doreen Valley</p>
-      <p class="fine">A residents' campaign concerning the proposed Middle Hut battery facility at 260 and 340 Middle Hut Road, Doreen. We are not connected with, or endorsed by, Turnbull Renewables, BZ Renewables, Cogency Australia, Nillumbik Shire Council or the Department of Transport and Planning. Nothing on this website is legal or planning advice — please check the public notice for the details that apply to your own objection.</p>
+      <p class="fine">A residents' campaign about the proposed Middle Hut battery facility, 260 and 340 Middle Hut Road, Doreen. Not connected with or endorsed by Turnbull Renewables, BZ Renewables, Cogency Australia, Nillumbik Shire Council or the Department of Transport and Planning. Not legal or planning advice — check the public notice for the details that apply to your objection.</p>
     </div>
     <div>
       <p class="fine"><a href="#/act">Leave your details</a> and we will be in touch.<br>[AUTHORISED BY — name, suburb]<br>Last updated 22 September 2026</p>
@@ -715,6 +863,12 @@ footer.foot .grid{display:grid;gap:1.35rem;grid-template-columns:1fr}
 
   window.addEventListener("hashchange", function () { route(true); });
   route(false);
+
+  /* one gentle entrance on first paint, then never again */
+  try {
+    document.documentElement.classList.add("animate");
+    window.setTimeout(function () { document.documentElement.classList.remove("animate"); }, 1600);
+  } catch (e) { /* no matter */ }
 
   /* ---------- helpers ---------- */
   function copy(text, onOk, onFail) {
@@ -809,10 +963,7 @@ footer.foot .grid{display:grid;gap:1.35rem;grid-template-columns:1fr}
       function () { say("copyStatus", "Copying did not work. Select the text and press Ctrl and C together."); });
   });
 
-  /* ---------- sending ----------
-     Hosted normally, the request below goes straight to Formspree and the
-     visitor stays on the page. Inside a claude.ai preview the sandbox blocks
-     it, so we fall back to sending the form in a new tab instead. */
+  /* ---------- sending ---------- */
   var labels = {};
   function busy(btn, msg) {
     if (!btn) return;
